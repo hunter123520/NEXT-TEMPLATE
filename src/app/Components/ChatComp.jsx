@@ -4,7 +4,7 @@ import '../Styles/ChatComp.css';
 import { Avatar, TextField, Button, CircularProgress } from '@mui/material';
 import SendIcon from '@mui/icons-material/Send';
 import { useState } from 'react';
-import APIService from '../Api/APIService';
+import APIService from '../Apis/APIService';
 import Image from 'next/image';
 import resg from '../Images/res1.jpg';
 import user from '../Images/user.png';

@@ -3,7 +3,7 @@ import React , {useState,useEffect} from 'react'
 import ChatComp from '../Components/ChatComp'
 import "../Styles/Recycle.css"
 import Uploader from '../Components/Uploader'
-import APIService from '../Api/APIService'
+import APIService from '../Apis/APIService'
 import { CircularProgress } from "@mui/material";
 import Container from 'react-bootstrap/Container';
 import battery from "../Images/battery.jpg"
