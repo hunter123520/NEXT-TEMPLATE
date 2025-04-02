@@ -26,3 +26,6 @@ def internal_server_error(error):
 
 api.add_resource(Chat, '/api/chat')
 api.add_resource(Recycle, '/api/recycle')
+
+if __name__ == "__main__":
+    app.run()
