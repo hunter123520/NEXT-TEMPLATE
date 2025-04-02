@@ -1,43 +1,43 @@
 "use client";
 
-// import { useEffect } from "react";
-// import i18n from "i18next";
-// import { initReactI18next } from "react-i18next";
-// import HttpApi from "i18next-http-backend";
-// import LanguageDetector from "i18next-browser-languagedetector";
-
-// const initI18n = () => {
-//   if (!i18n.isInitialized) {
-//     i18n
-//       .use(HttpApi)
-//       .use(LanguageDetector)
-//       .use(initReactI18next)
-//       .init({
-//         supportedLngs: ["en", "ar"],
-//         fallbackLng: "en",
-//         debug: false,
-//         interpolation: { escapeValue: false },
-//         backend: { loadPath: "/locales/{{lng}}/translation.json" },
-//       });
-//   }
-// };
-
-// const I18nInitializer = () => {
-//   useEffect(() => {
-//     initI18n();
-//   }, []);
-
-//   return null;
-// };
-
-// export { I18nInitializer, i18n };
-
-// "use client"; // 👈 Ensure it's a Client Component
-
+import { useEffect } from "react";
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import HttpApi from "i18next-http-backend";
 import LanguageDetector from "i18next-browser-languagedetector";
+
+const initI18n = () => {
+  if (!i18n.isInitialized) {
+    i18n
+      .use(HttpApi)
+      .use(LanguageDetector)
+      .use(initReactI18next)
+      .init({
+        supportedLngs: ["en", "ar"],
+        fallbackLng: "en",
+        debug: false,
+        interpolation: { escapeValue: false },
+        backend: { loadPath: "/locales/{{lng}}/translation.json" },
+      });
+  }
+};
+
+const I18nInitializer = () => {
+  useEffect(() => {
+    initI18n();
+  }, []);
+
+  return null;
+};
+
+export { I18nInitializer, i18n };
+
+// "use client"; // 👈 Ensure it's a Client Component
+
+// import i18n from "i18next";
+// import { initReactI18next } from "react-i18next";
+// import HttpApi from "i18next-http-backend";
+// import LanguageDetector from "i18next-browser-languagedetector";
 
 // if (!i18n.isInitialized) {
 //   i18n
@@ -53,7 +53,7 @@ import LanguageDetector from "i18next-browser-languagedetector";
 //     });
 // }
 
-export default i18n;
+// export default i18n;
 
 // "use client"
 // import i18n from "i18next";
