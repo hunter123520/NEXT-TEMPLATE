@@ -76,7 +76,7 @@ function Home() {
         </Container>
             
         <Container fluid="x" className='d-flex flex-row page-three'>
-            <Image src={"/Images/planet.jfif"} alt=""  className='img-left' width={400} height={400}/>
+            <Image src={"/Images/planet.jpg"} alt=""  className='img-left' width={400} height={400}/>
             <div className='d-flex flex-column justify-content-start align-items-start p-5 text-start w-50 right-area' style={{gap:"25px"}}>
                 <div className='second-title text-start w-100' style={{fontSize:"40px"}}>
                     <span> <span style={{color:"var(--main)"}}>  {t("Contact")}  </span>  {t("Us with your")}  
