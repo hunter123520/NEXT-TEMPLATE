@@ -5,9 +5,6 @@
       "PYTHON_VERSION": "3.10"
     }
     },
-    "hooks": {
-    "build": "pip install distutils"
-  },
     "builds": [
       {
         "src": "api/index.py",
