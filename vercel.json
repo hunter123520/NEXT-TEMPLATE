@@ -20,6 +20,9 @@
         "src": "/api/(.*)",
         "dest": "/api/index.py"
       }
-    ]
+    ],
+    "hooks": {
+    "build": "pip install distutils"
+  }
   }
   

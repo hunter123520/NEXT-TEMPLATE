@@ -1,7 +1,7 @@
 from flask import Flask, send_from_directory,current_app,jsonify,request,render_template
 from flask_restful import Api, Resource, reqparse
 from flask_cors import CORS #comment this on deployment
-from api.main import Chat,Recycle
+from main import Chat,Recycle
 app = Flask(__name__)
 
 api = Api(app)
@@ -27,5 +27,5 @@ def internal_server_error(error):
 api.add_resource(Chat, '/api/chat')
 api.add_resource(Recycle, '/api/recycle')
 
-if __name__ == "__main__":
-    app.run()
+# if __name__ == "__main__":
+#     app.run()
