@@ -1,5 +1,13 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "./Styles/App.css"
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./Styles/HomePage.css";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+import "./Styles/Fonts.css"
+import "./i18n";
+import { I18nInitializer } from "./i18n";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -20,13 +28,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <title>Sellami Mohammed Abdelhadi</title>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-
+         <I18nInitializer />
+        <Header/>
         {children}
+        <Footer/>
         
       </body>
     </html>
