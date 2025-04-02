@@ -3,7 +3,7 @@ import React from "react";
 import "../Styles/LearningPage.css";
 import "../Styles/ContactPage.css";
 import Container from "react-bootstrap/Container";
-import mmlPDF from "../PDF/mml-book.pdf";
+// import mmlPDF from "../PDF/mml-book.pdf";
 
 const sources = [
   // {
@@ -44,7 +44,7 @@ const sources = [
   {
     title: "Mathematics for Machine Learning",
 
-    link: mmlPDF,
+    link:  "../PDF/mml-book.pdf",
   },
 ];
 const render_sources = sources.map((source, index) => {
