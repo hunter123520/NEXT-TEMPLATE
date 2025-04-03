@@ -7,7 +7,7 @@ from PIL import Image
 from io import BytesIO
 import base64
 # from google import genai
-# import google.generativeai as genai
+import google.generativeai as genai
 
 
 
@@ -83,31 +83,34 @@ class Chat(Resource):
         #     contents="Explain how AI works",
         # )
         
+        genai.configure(api_key=API)
         # Select a model
-        # model = genai.GenerativeModel("gemini-2.0-flash")
+        model = genai.GenerativeModel("gemini-2.0-flash")
   
-        # # Generate a response
-        # response = model.generate_content(question)
+        # Generate a response
+        response = model.generate_content(question)
 
-        url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API}"
+        # url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key={API}"
 
-        headers = {
-            "Content-Type": "application/json"
-        }
+        # headers = {
+        #     "Content-Type": "application/json"
+        # }
 
-        data = {
-            "contents": [
-                {
-                    "parts": [
-                        {
-                            "text": {question}
-                        }
-                    ]
-                }
-            ]
-        }
-
-        response = req.post(url, headers=headers, json=data)
-                
-        # return {"output":response.text}
-        return {"output":response.json()["candidates"][0]["content"]["parts"][0]["text"]}
+        # data = {
+        #     "contents": [
+        #         {
+        #             "parts": [
+        #                 {
+        #                     "text": {question}
+        #                 }
+        #             ]
+        #         }
+        #     ]
+        # }
+        # json_data = json.dumps(data)  
+        # response = req.post(url, headers=headers, json=json_data)
+        # print(response)
+        # data = json.loads(response.text)
+        # print(data)
+        return {"output":response.text}
+        # return {"output":data["candidates"][0]["content"]["parts"][0]["text"]}
