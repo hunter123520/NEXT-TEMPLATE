@@ -143,14 +143,14 @@ function Home() {
 
 
         <Container fluid="x"  className='relative w-full h-screen flex flex-col justify-center items-center  intro-page' >
-            {/* <Image
+            <Image
             src={bg}
             alt="Intro Background"
             layout="fill"
             objectFit="cover"
             quality={100} // Optimized quality
             className="z-0"
-        /> */}
+        />
       <div className="absolute inset-0 bg-black/60 shadow-overlay z-0"></div>
 
       <div className="z-10 text-center d-flex flex-column justify-content-center align-items-center">
