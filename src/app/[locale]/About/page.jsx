@@ -17,14 +17,15 @@ import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import GL from "../Images/GL.png";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import Link from 'next/link'
 import Image from "next/image";
 
 
 
 function AboutPage() {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
 
   const objectives_tl = [
     t("Save our Functions"),

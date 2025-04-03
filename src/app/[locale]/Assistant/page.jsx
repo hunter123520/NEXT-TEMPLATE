@@ -4,10 +4,10 @@ import "../Styles/LearningPage.css";
 import "../Styles/ContactPage.css";
 import Container from "react-bootstrap/Container";
 import ChatComp from "../Components/ChatComp";
-import { useTranslation } from "react-i18next";
-
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 const Assistant = () => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   return (
     <div>
       <Container fluid="xxl" className="CPT">

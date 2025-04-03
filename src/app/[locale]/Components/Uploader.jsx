@@ -6,7 +6,8 @@ import { Alert } from "@mui/material";
 import { Button } from "react-bootstrap";
 import emp from "../Images/emp.png";
 import full from "../Images/full.png";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 const Uploader = ({
   handleChange,
@@ -14,7 +15,7 @@ const Uploader = ({
   name = "file",
   types = ["CSV"],
 }) => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   const [type, setType] = useState("normal");
   const [file, setFile] = useState();
   return (
@@ -61,7 +62,7 @@ const Uploader = ({
             <Image className='imgup' src={type == "success" ? full : emp } alt="" />
             {/* <Upload size={22} /> */}
             <div>
-              {t("Drag and Drop or")}
+              {t("Drag_and_Drop_or")}
               <span style={{ color: "var(--blue)" }}> {t("Choose image")} </span>
               {t("to Upload")}
             </div>
@@ -81,17 +82,17 @@ const Uploader = ({
       />
       {type == "type" ? (
         <Alert className="w-100" severity="error">
-          {t("The Type of the File u choose is not Accepted")}
+          {t("The_Type_of_the_File_u_choose_is_not_Accepted")}
         </Alert>
       ) : type == "size" ? (
         <Alert className="w-100" severity="error">
-          {t("The Size of the File u choose is not Accepted")}
+          {t("The_Size_of_the_File_u_choose_is_not_Accepted")}
         </Alert>
       ) : type == "success" ? (
         <Alert className="w-100 align-items-center" severity="success">
           <div className="d-flex flex-column">
             <span>{file.name}</span>
-            <span>{t("Uploaded Successfully")}</span>
+            <span>{t("Uploaded_Successfully")}</span>
           </div>
         </Alert>
       ) : (

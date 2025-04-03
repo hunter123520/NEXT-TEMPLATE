@@ -12,7 +12,8 @@ import WhiteLG from "../Images/logo/WhiteLG.png";
 import univ_logo from "../Images/logo/logo.png";
 import Switch, { SwitchProps } from '@mui/material/Switch';
 import { styled } from '@mui/material/styles';
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import Image from "next/image";
 
 import i18n from "../i18n";
@@ -76,7 +77,7 @@ function CustomLink({ href, children, ...props }) {
 }
 
 function Header() {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   const pathname = usePathname();
 
   return (
@@ -101,9 +102,9 @@ function Header() {
             <CustomLink className="link_page" href="/"> {t("Home")}</CustomLink>
             <CustomLink className="link_page" href="/Recycle"> {t("Recycle")} </CustomLink>
             <CustomLink className="link_page" href="/Assistant"> {t("Assistant")} </CustomLink>
-            <CustomLink className="link_page" href="/Industries"> {t("For Industries")} </CustomLink>
+            <CustomLink className="link_page" href="/Industries"> {t("ForIndustries")} </CustomLink>
             <CustomLink className="link_page" href="/About">{t("About")}</CustomLink>
-            <CustomLink className="link_page " href="/Contact"> {t("Contact us")} </CustomLink>
+            <CustomLink className="link_page " href="/Contact"> {t("contactus")} </CustomLink>
           </Nav>
         </Navbar.Collapse>
       </Container>

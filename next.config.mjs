@@ -1,9 +1,11 @@
+// const createNextIntlPlugin = require('next-intl/plugin');
+import createNextIntlPlugin from 'next-intl/plugin';
+const withNextIntl = createNextIntlPlugin();
+ 
 /** @type {import('next').NextConfig} */
+
 const nextConfig = {
   reactStrictMode: true,
-  experimental: {
-    srcDir: 'src',
-  },
     async redirects() {
       return [
         {
@@ -27,5 +29,5 @@ const nextConfig = {
     
   };
   
-  export default nextConfig;
+  export default withNextIntl(nextConfig);
   

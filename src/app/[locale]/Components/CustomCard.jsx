@@ -2,9 +2,10 @@ import React from 'react'
 import IconButton from '@mui/material/IconButton';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { Button } from '@mui/material';
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 const CustomCard = ({icon,title="Data Center",content="",content1="",border=true,swap=false,link=""}) => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   return (
     <div className={'d-flex flex-column justify-content-center align-items-start p-4 pb-0 Card-show '+ (border==false?"no-border" : "")} >
                 <div className='mb-4 d-flex justify-content-start align-items-start h-25'>

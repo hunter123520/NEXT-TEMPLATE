@@ -79,7 +79,8 @@ import wt2 from "../Images/wt2.jpg"
 import wt3 from "../Images/wt3.jpg"
 import wt4 from "../Images/wt4.jpg"
 import wt5 from "../Images/wt5.jpg"
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import Image from 'next/image';
 const images = [
     battery,
@@ -120,7 +121,7 @@ const Recycle = () => {
     const [question,setquestion] = useState("what to do with plastic garbage")
     const [showIndex,setShowIndex] = useState(0)
     const [img,setimg] = useState(null);
-    const { t, i18n } = useTranslation();
+    const t = useTranslations();
 
     const guidelines =  t("There are several ways to find information about recycling in your area: Your local waste collection provider's website: They will usually have a detailed list of accepted recyclables and any specific instructions. Earth911 (https://earth911.com/) is a comprehensive search engine for recycling information by location. Your municipality's website: They might have a dedicated section for recycling guidelines and drop-off locations.");
 

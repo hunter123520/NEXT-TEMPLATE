@@ -4,9 +4,10 @@ import React, { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import Container from 'react-bootstrap/Container';
 import "../Styles/ContactPage.css"
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 function ContactPage(){
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
     const [formStatus, setFormStatus] = useState(t('Send'))
     const form = useRef();
 
@@ -37,13 +38,13 @@ function ContactPage(){
       <div>
       <Container fluid="xxl" className='CPT'>
           <div className="CPTTitle">
-            {t("Contact us")}
+            {t("Contact_us")}
             
             <hr className='lineSt'/>
           </div>
           
           <div className='CPTdesc'>
-          {t("Here you can send us your feedback, problems, sujessions and anything you want to tell us about feel free and write what ever you want to say we will read it later.")}
+          {t("Here_you_can_send_us_your_feedback,_problems,_sujessions_and_anything_you_want_to_tell_us_about_feel_free_and_write_what_ever_you_want_to_say_we_will_read_it_later.")}
             
           </div>
         </Container>

@@ -4,11 +4,11 @@ import Link from "next/link";
 import "bootstrap/dist/css/bootstrap.min.css";
 //import Container from 'react-bootstrap/Container';
 import '../Styles/Footer.css';
-import { useTranslation } from "react-i18next";
-
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 
 function Footer(){
-    const { t, i18n } = useTranslation();
+    const t = useTranslations();
     return(
         <div className="footer-container" >
             <div className="left">            
@@ -22,11 +22,11 @@ function Footer(){
                         <Link rel="prefetch"  href='/About'className="footer_link">{t("About")}</Link>
                     </li>
                     <li className="footer_item">
-                        <Link rel="prefetch"  href='/Contact'className="footer_link">{t("Contact us")}</Link>
+                        <Link rel="prefetch"  href='/Contact'className="footer_link">{t("contactus")}</Link>
                     </li>
                 </ul>
                 <div className="copy-rights-container">
-                    <p className="copy-rights"> {t("Copyrights (c) 2024. All rights reserved")}</p>
+                    <p className="copy-rights"> {t("copyrights")}</p>
                 </div>
             </div>
             <div className="right">

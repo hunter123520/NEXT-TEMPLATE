@@ -8,10 +8,10 @@ import APIService from '../Apis/APIService';
 import Image from 'next/image';
 import resg from '../Images/res1.jpg';
 import user from '../Images/user.png';
-import { useTranslation } from 'react-i18next';
-
+// import { useTranslation } from 'react-i18next';
+import {useTranslations} from 'next-intl';
 function ChatComp(){
-    const { t, i18n } = useTranslation();
+    const t = useTranslations();
     const [text,setText] = useState(t("How can i recycle a plastic bag"))
     const [output, setoutput] = useState("");
     const [waiting, setWaiting] = useState(false);
@@ -34,7 +34,7 @@ function ChatComp(){
     return(
         <div style={{width:"100%"}}>
             <div className='descotitle' style={{textAlign:"center"}}>
-            {t("Recycling Garbage")}  <span style={{color: "#578a25"}}>{t("Assistant")} </span>
+            {t("Recycling_Garbage")}  <span style={{color: "#578a25"}}>{t("Assistant")} </span>
                     </div>
                     <div style={{height:50}}>
 

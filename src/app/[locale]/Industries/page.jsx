@@ -5,9 +5,10 @@ import Container from "react-bootstrap/Container";
 import "../Styles/LearningPage.css";
 import "../Styles/ContactPage.css";
 import i18n from "../i18n";
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 function Industries(){
-    const { t, i18n } = useTranslation();
+    const t = useTranslations();
     return(
         <div className="" >
             <Container fluid="xxl" className="CPT1" style={{height:"125vh"}}>

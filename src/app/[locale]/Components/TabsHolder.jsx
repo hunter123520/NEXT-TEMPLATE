@@ -8,7 +8,8 @@ import { Avatar } from "@mui/material";
 import Rating from '@mui/material/Rating';
 import { Button } from '@mui/material';
 import EmblaCarousel from '../Components/EmblaCarousel'
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 import '../Styles/embla.css'
 import Image from "next/image";
 import battery1 from "../Images/GC/battery/battery (1).jpg"
@@ -243,7 +244,7 @@ function CustomTabPanel(props) {
 
 const TabsHolder = () => {
     const [value, setValue] = React.useState(0);
-    const { t, i18n } = useTranslation();
+    const t = useTranslations();
 
     const handleChange = (event, newValue) => {
       setValue(newValue);
@@ -259,13 +260,13 @@ const TabsHolder = () => {
         <Tab label={t("Brown Glass")} {...a11yProps(2)} className='Tab'/>
         <Tab label={t("Cardboard")} {...a11yProps(3)} className='Tab'/>
         <Tab label={t("Clothes")} {...a11yProps(4)} className='Tab'/>
-        <Tab label={t("Green Glass" )}{...a11yProps(5)} className='Tab'/>
+        <Tab label={t("Green_Glass" )}{...a11yProps(5)} className='Tab'/>
         <Tab label={t("Metal")} {...a11yProps(6)} className='Tab'/>
         <Tab label={t("Paper")} {...a11yProps(7)} className='Tab'/>
         <Tab label={t("Plastic")} {...a11yProps(8)} className='Tab'/>
         <Tab label={t("Shoes")} {...a11yProps(9)} className='Tab'/>
         <Tab label={t("Trash")} {...a11yProps(10)} className='Tab'/>
-        <Tab label={t("White Glass")} {...a11yProps(11)} className='Tab'/>
+        <Tab label={t("White_Glass")} {...a11yProps(11)} className='Tab'/>
       </Tabs>
     </Box>
       <CustomTabPanel value={value} index={0}> {Food_Generator(battery_List)} </CustomTabPanel>

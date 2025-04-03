@@ -1,9 +1,10 @@
 import React from 'react'
 import { Button } from '@mui/material';
 import Link from 'next/link'
-import { useTranslation } from "react-i18next";
+// import { useTranslation } from "react-i18next";
+import {useTranslations} from 'next-intl';
 const CardShow = ({title="Recycle",icon,text="",link}) => {
-  const { t, i18n } = useTranslation();
+  const t = useTranslations();
   return (
     <div className='Card-Show d-flex flex-column justify-content-center align-items-center pl-3 pr-3'>
         <div className='d-flex flex-column justify-content-center align-items-center ' style={{height:"55%",zIndex:5,gap:"10px"}}>
