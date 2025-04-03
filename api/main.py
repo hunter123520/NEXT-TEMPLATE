@@ -6,7 +6,8 @@ import json
 from PIL import Image  
 from io import BytesIO
 import base64
-from google import genai
+# from google import genai
+import google.generativeai as genai
 
 
 
@@ -61,7 +62,10 @@ class Recycle(Resource):
         return {"output":prediction}
 
 API="AIzaSyCZVM0_yjl3Un-mR32EgG1lnFxgQOBNOhE"
-client = genai.Client(api_key=API)
+# client = genai.Client(api_key=API)
+# Set API key
+genai.configure(api_key=API)
+
 class Chat(Resource):
     def get(self):
         return {
@@ -71,11 +75,19 @@ class Chat(Resource):
     def post(self):
         print(self)
         context = ""
+
         question =  request.json["question"]
 
-        response = client.models.generate_content(
-            model="gemini-2.0-flash",
-            contents="Explain how AI works",
-        )
+        # response = client.models.generate_content(
+        #     model="gemini-2.0-flash",
+        #     contents="Explain how AI works",
+        # )
         
+        # Select a model
+        model = genai.GenerativeModel("gemini-2.0-flash")
+  
+        # Generate a response
+        response = model.generate_content(question)
+
+                
         return {"output":response.text}

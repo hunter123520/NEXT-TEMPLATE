@@ -5,7 +5,10 @@ from main import Chat,Recycle
 import os
 import sys
 
+
+
 app = Flask(__name__)
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 api = Api(app)
 
 app.config['CORS_HEADERS'] = 'Content-Type'
@@ -13,7 +16,7 @@ app.config['UPLOAD_FOLDER'] = r'/*'
 app.config['MAX_CONTENT_LENGTH'] = 16 * 1024 * 1024
 
 
-@app.route("/api/", defaults={'path':''})
+@app.route("/", defaults={'path':''})
 def serve(path):
     print(app.static_folder)
     

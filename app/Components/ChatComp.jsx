@@ -44,11 +44,11 @@ function ChatComp(){
                 {
                     questions.map((element,i) => {
                
-                        return (<>
+                        return (<div key={"SENDREC"+i}>
                         <div className='SendMessageContainer' key={"send"+i}>
                             <div className='ChatImageHolder'>
                             <Avatar >
-                                <Image src={user}/>
+                                <Image src={user} alt="user"/>
                             </Avatar>
                             </div>
                             <div className='SendContentHolder'>
@@ -58,7 +58,7 @@ function ChatComp(){
                         <div className='ReceiverMessageContainer' key={"recieve"+i}>
                         <div className='ChatImageHolder'>
                             <Avatar >
-                                 <Image src={resg}/>
+                                 <Image src={resg} alt="resp"/>
                             </Avatar>
                             </div>
                             <div className='ReceiverContentHolder'>
@@ -82,7 +82,7 @@ function ChatComp(){
                             )}
                             </div>
                         </div>
-                                    </>)
+                                    </div>)
                                 })
                             }
             </div>
