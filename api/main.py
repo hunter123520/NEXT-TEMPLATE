@@ -6,6 +6,9 @@ import json
 from PIL import Image  
 from io import BytesIO
 import base64
+from google import genai
+
+
 
 # Function to encode the image
 def encode_image(image_path):
@@ -57,7 +60,8 @@ class Recycle(Resource):
             prediction = randrange(12)
         return {"output":prediction}
 
-API_KEY  = "blBXxEYF7eYX0h3O17rtVZOc0REp0RW6"
+API="AIzaSyCZVM0_yjl3Un-mR32EgG1lnFxgQOBNOhE"
+client = genai.Client(api_key=API)
 class Chat(Resource):
     def get(self):
         return {
@@ -69,28 +73,9 @@ class Chat(Resource):
         context = ""
         question =  request.json["question"]
 
-        url = "https://api.ai21.com/studio/v1/j2-ultra/chat"
+        response = client.models.generate_content(
+            model="gemini-2.0-flash",
+            contents="Explain how AI works",
+        )
         
-        payload = {
-            "numResults": 1,
-            "temperature": 0.7,
-            "messages": [
-                {
-                    "text": question,
-                    "role": "user"
-                }
-            ],
-            "system": "You are an AI assistant for recycling garbage. Your responses should be informative and concise."
-
-        }
-        headers = {
-            "accept": "application/json",
-            "content-type": "application/json",
-            "Authorization": f'Bearer {API_KEY}'
-        }
-
-        response = req.post(url, json=payload, headers=headers)
-
-        data = json.loads(response.text)
-        
-        return {"output":data["outputs"][0]["text"]}
+        return {"output":response.text}
