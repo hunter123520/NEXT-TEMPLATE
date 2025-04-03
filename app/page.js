@@ -5,7 +5,7 @@ import "./Styles/HomePage.css";
 import { Button } from '@mui/material';
 // import { BsArrowRight } from "react-icons/bs";
 import introimg from "./Images/intro.jpg"
-// import display1 from "./Images/planet.jfif";
+import plnt from "./Images/planet.jpg";
 import React from 'react';
 import RecyclingIcon from '@mui/icons-material/Recycling';
 import SmartToyIcon from '@mui/icons-material/SmartToy';
@@ -23,6 +23,7 @@ import { useTranslation } from "react-i18next";
 import Link from 'next/link'
 import Image from "next/image";
 import "./Styles/App.css"
+
 function Home() {
     const { t, i18n } = useTranslation();
 
@@ -36,7 +37,7 @@ function Home() {
         layout="fill"
         objectFit="cover"
         quality={100} // Optimized quality
-        className="z-0"
+        className="absolute z-0"
       />
       <div className="absolute inset-0 bg-black/60 shadow-overlay z-0"></div>
        <div className="z-10 text-center d-flex flex-column justify-content-center align-items-center">
@@ -76,7 +77,7 @@ function Home() {
         </Container>
             
         <Container fluid="x" className='d-flex flex-row page-three'>
-            <Image src={"/Images/planet.jpg"} alt=""  className='img-left' width={400} height={400}/>
+            <Image src={plnt} alt=""  className='img-left' width={400} height={400}/>
             <div className='d-flex flex-column justify-content-start align-items-start p-5 text-start w-50 right-area' style={{gap:"25px"}}>
                 <div className='second-title text-start w-100' style={{fontSize:"40px"}}>
                     <span> <span style={{color:"var(--main)"}}>  {t("Contact")}  </span>  {t("Us with your")}  
