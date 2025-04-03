@@ -34,7 +34,7 @@ const CustomCard = ({icon,title="Data Center",content="",content1="",border=true
                           {content}
 
                       </span></>)}
-                      <Button variant='outlined' className='intro-button mt-3' href={link}>{t("Read More")}</Button>
+                      <Button variant='outlined' className='intro-button mt-3' href={link}>{t("Read_More")}</Button>
                 {/* <IconButton>
                     <ArrowForwardIcon style={{color:"var(--wt)",fontSize:"50px"}} ></ArrowForwardIcon>
                 </IconButton> */}

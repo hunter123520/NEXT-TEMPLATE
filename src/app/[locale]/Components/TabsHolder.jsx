@@ -257,7 +257,7 @@ const TabsHolder = () => {
       <Tabs  value={value} onChange={handleChange} centered  >
         <Tab label={t("Battery")} {...a11yProps(0)} className='Tab' />
         <Tab label={t("Biological")} {...a11yProps(1)} className='Tab'/>
-        <Tab label={t("Brown Glass")} {...a11yProps(2)} className='Tab'/>
+        <Tab label={t("Brown_Glass")} {...a11yProps(2)} className='Tab'/>
         <Tab label={t("Cardboard")} {...a11yProps(3)} className='Tab'/>
         <Tab label={t("Clothes")} {...a11yProps(4)} className='Tab'/>
         <Tab label={t("Green_Glass" )}{...a11yProps(5)} className='Tab'/>
