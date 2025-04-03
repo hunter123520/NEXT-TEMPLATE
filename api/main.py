@@ -64,7 +64,7 @@ class Recycle(Resource):
 API="AIzaSyCZVM0_yjl3Un-mR32EgG1lnFxgQOBNOhE"
 # client = genai.Client(api_key=API)
 # Set API key
-genai.configure(api_key=API)
+# genai.configure(api_key=API)
 
 class Chat(Resource):
     def get(self):
