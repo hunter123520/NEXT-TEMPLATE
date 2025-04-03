@@ -8,7 +8,7 @@ import Taher from "../Images/DEVS/Taher.jpg";
 import DJ from "../Images/DEVS/DJ.jpg";
 import TJ from "../Images/DEVS/TJ.jpg";
 import BH from "../Images/DEVS/BH.jpg";
-
+import unv from "../Images/unv.jpg";
 import TH from "../Images/Thanks.png";
 import { CgShapeRhombus } from "react-icons/cg";
 import { Avatar } from "@mui/material";
@@ -168,7 +168,7 @@ function AboutPage() {
           height:"350px"
         }}>
         <Image
-          src="/Images/unv.jpg" // Change to your image path
+          src={unv} // Change to your image path
           alt="Sample Image"
           layout="fill"
           objectFit="cover"
