@@ -28,6 +28,6 @@ const nextConfig = {
     },
     
   };
-  
-  export default withNextIntl(nextConfig);
+  // withNextIntl()
+  export default nextConfig;
   
