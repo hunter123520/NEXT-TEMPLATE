@@ -19,16 +19,6 @@ def encode_image(image_path):
 from random import randrange
 
 def upload_file(file, url="http://localhost:8000/classify"):
-    """
-    Uploads a file to the FastAPI endpoint specified by the URL.
-
-    Args:
-        file_path (str): The path to the file to upload.
-        url (str, optional): The URL of the FastAPI endpoint. Defaults to "http://localhost:8000/classify".
-
-    Returns:
-        dict: The response from the FastAPI endpoint.
-    """ 
     with BytesIO() as buf:
       file.save(buf, 'jpeg')
       image_bytes = buf.getvalue()
@@ -51,7 +41,8 @@ class Recycle(Resource):
 
         img = Image.open(BytesIO(base64.b64decode(res))).convert("RGB")
 
-        url = "https://seyf1elislam-test-test.hf.space/classify"
+        # url = "https://seyf1elislam-test-test.hf.space/classify"
+        url = "https://missingbreath-template-project.hf.space/classify"
 
         try:
             response = upload_file(img,url)
