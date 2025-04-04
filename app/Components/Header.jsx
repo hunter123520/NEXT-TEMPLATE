@@ -98,12 +98,12 @@ function Header() {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto align-end w-100 justify-content-end">
-            <CustomLink className="link_page" href="/"> {t("Home")}</CustomLink>
-            <CustomLink className="link_page" href="/Recycle"> {t("Recycle")} </CustomLink>
-            <CustomLink className="link_page" href="/Assistant"> {t("Assistant")} </CustomLink>
-            <CustomLink className="link_page" href="/Industries"> {t("For Industries")} </CustomLink>
-            <CustomLink className="link_page" href="/About">{t("About")}</CustomLink>
-            <CustomLink className="link_page " href="/Contact"> {t("Contact us")} </CustomLink>
+            <CustomLink className="link_page" href="/" as="../Styles/Recycle.css"> {t("Home")}</CustomLink>
+            <CustomLink className="link_page" href="/Recycle" as="../Styles/Recycle.css"> {t("Recycle")} </CustomLink>
+            <CustomLink className="link_page" href="/Assistant" as="../Styles/Recycle.css"> {t("Assistant")} </CustomLink>
+            <CustomLink className="link_page" href="/Industries" as="../Styles/Recycle.css"> {t("For Industries")} </CustomLink>
+            <CustomLink className="link_page" href="/About" as="../Styles/Recycle.css">{t("About")}</CustomLink>
+            <CustomLink className="link_page " href="/Contact" as="../Styles/Recycle.css"> {t("Contact us")} </CustomLink>
           </Nav>
         </Navbar.Collapse>
       </Container>
