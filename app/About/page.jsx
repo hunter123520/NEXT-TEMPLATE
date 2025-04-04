@@ -326,7 +326,7 @@ function AboutPage() {
 
 
       <div id="ShareKnowledge" 
-      className="Goals w-100 d-flex flex-row"
+      className="ShareKnowledge w-100 d-flex flex-row"
       style={{ padding: "15%", paddingTop: "10%", paddingBottom: "5%", backgroundColor:"white !important"}}
     >
         <div className="intro-container d-flex justify-content-center align-items-center">
