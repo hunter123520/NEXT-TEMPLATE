@@ -31,4 +31,3 @@ def internal_server_error(error):
 
 api.add_resource(Chat, '/api/chat')
 api.add_resource(Recycle, '/api/recycle')
-#

@@ -54,10 +54,7 @@ class Recycle(Resource):
             prediction = randrange(12)
         return {"output":prediction}
 
-load_dotenv()  # Load environment variables from .env file
-API = os.getenv("GOOGLE_API")
-if not API:
-    raise ValueError("GOOGLE_API environment variable is not set")
+API="S"
 
 
 # client = genai.Client(api_key=API)
