@@ -6,6 +6,7 @@ import json
 from PIL import Image  
 from io import BytesIO
 import base64
+import os
 # from google import genai
 # import google.generativeai as genai
 
@@ -52,7 +53,13 @@ class Recycle(Resource):
             prediction = randrange(12)
         return {"output":prediction}
 
-API="AIzaSyCZVM0_yjl3Un-mR32EgG1lnFxgQOBNOhE"
+# Load .env file
+load_dotenv()
+
+# Get API keys
+API = os.getenv("GoogleAPI")
+
+
 # client = genai.Client(api_key=API)
 # Set API key
 # genai.configure(api_key=API)
