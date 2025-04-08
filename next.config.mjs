@@ -11,10 +11,11 @@ const nextConfig = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
-  // theme: {
-  //   extend: {},
-  // },
-  // plugins: [typography], 
+  theme: {
+    extend: {},
+  },
+  plugins: [typography], 
+   darkMode: 'class',
   reactStrictMode: true,
     async redirects() {
       return [
