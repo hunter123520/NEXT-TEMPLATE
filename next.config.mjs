@@ -14,7 +14,7 @@ const nextConfig = {
   // theme: {
   //   extend: {},
   // },
-  plugins: [typography], 
+  // plugins: [typography], 
   reactStrictMode: true,
     async redirects() {
       return [
