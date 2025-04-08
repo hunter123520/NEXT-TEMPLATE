@@ -11,9 +11,9 @@ const nextConfig = {
     './components/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
   ],
-  theme: {
-    extend: {},
-  },
+  // theme: {
+  //   extend: {},
+  // },
   plugins: [typography], 
   reactStrictMode: true,
     async redirects() {
