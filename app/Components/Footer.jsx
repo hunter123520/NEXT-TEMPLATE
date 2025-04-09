@@ -26,7 +26,7 @@ function Footer(){
                     </li>
                 </ul>
                 <div className="copy-rights-container">
-                    <p className="copy-rights"> {t("Copyrights (c) 2024. All rights reserved")}</p>
+                    <p className="copy-rights"> {t("Copyrights (c) 2025. All rights reserved")}</p>
                 </div>
             </div>
             <div className="right">

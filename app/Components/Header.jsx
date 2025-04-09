@@ -110,6 +110,7 @@ function Header() {
       </Container>
 
       <MaterialUISwitch value={i18n.resolvedLanguage != "ar"} sx={{ m: 1 }} onClick={()=>{
+        console.log(i18n.resolvedLanguage)
         if(i18n.resolvedLanguage == "ar"){
           i18n.changeLanguage("en");
         }else{
